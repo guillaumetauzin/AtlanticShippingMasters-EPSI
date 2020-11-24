@@ -27,21 +27,23 @@ namespace CalculDistance
 
         public double ConversionLatitude(double degree, int minute, int seconde, string NS)
         {
+            int neg = 1;
             if (NS == "S")
             {
-                degree = -degree;
+                neg = -1;
             }
-            double lati = degree + 1 / 60 * minute + 1 / 3600 * seconde;
+            double lati = neg * (degree + 1 / 60 * minute + 1 / 3600 * seconde);
             return lati;
         }
 
         public double ConversionLongitude(double degree, int minute, int seconde, string OW)
         {
+            int neg = 1;
             if (OW == "W")
             {
-                degree = -degree;
+                neg = -1;
             }
-            double longi = degree + 1 / 60 * minute + 1 / 3600 * seconde;
+            double longi = neg * (degree + 1 / 60 * minute + 1 / 3600 * seconde);
             return longi;
         }
     }
