@@ -36,18 +36,17 @@
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById("map"), {
-                    center: { lat: 35, lng: 0 },
-                    zoom: 2,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center: { lat: 35, lng: 50 },
+                    zoom: 5,
                 });
 
                 for (var i = 0; i < ports.length; i++) {
                     var port = ports[i];
 
                     var marker = new google.maps.Marker({
-                        position: { lat: port[1], lng: port[2] },
+                        position: { lat: port[2], lng: port[3] },
                         map: map,
-                        title: port[0],
+                        title: port[1],
                         //icon: "assets/img/Logo.png"
                     });
 
