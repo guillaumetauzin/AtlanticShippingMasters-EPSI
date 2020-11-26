@@ -1,4 +1,15 @@
-﻿<!doctype html>
+﻿<?php
+$url = "https://foodtrack.ml/";
+try{
+$bdd = new PDO('mysql:host=db4free.net;dbname=projetcas', 'epsiprojet', 'W!pj2M9@!v_V5ku');
+echo "BDD Connecté !";
+}
+catch (Exception $e){
+die('Erreur : ' . $e->getMessage());
+}
+?>
+
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
