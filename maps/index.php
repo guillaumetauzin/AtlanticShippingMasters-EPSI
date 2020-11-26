@@ -40,8 +40,6 @@ die('Erreur : ' . $e->getMessage());
                 ["Porto Rico", 18.436333, -66.142861],//11
                 ["Port-au-Price", 18.628194, -72.316194],//12
             ];
-            console.log("Liste des Ports:");
-            console.log(ports);
 
             //Id 1, Id2 -> lien[0][0] lien[0][1] 
             //Id 1, Id2 -> lien[1][0] lien[1][1]
@@ -55,8 +53,9 @@ die('Erreur : ' . $e->getMessage());
                 [11, 12],
                 [12, 0],
             ];
-            console.log("Liste des Liens:");
-            console.log(liens);
+
+            //Log
+            console.log(Array(ports, liens));
 
             //Inisialisation de la Map
             let map;
