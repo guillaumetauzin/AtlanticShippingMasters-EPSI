@@ -22,8 +22,8 @@ die('Erreur : ' . $e->getMessage());
     <body>
         <div id="map"></div>
         <script>
-            var obj = { prop: ["1a", "2a", "3a"] };
-            //console.log(obj);
+            //Id 1 -> ports[0]
+            //Id 2 -> ports[1]
             var ports = [
                 //Id, Nom, Lat, Lng
                 ["Cork", 51.89, -8.498],//0 (en php -> index -1)
@@ -41,7 +41,8 @@ die('Erreur : ' . $e->getMessage());
                 ["Port-au-Price", 18.628194, -72.316194],//12
             ];
             console.log(ports);
-
+            //Id 1, Id2 -> lien[0][0] lien[0][1] 
+            //Id 1, Id2 -> lien[1][0] lien[1][1]
             var liens = [
                 //Port1, Port2
                 [0, 2],
@@ -52,6 +53,7 @@ die('Erreur : ' . $e->getMessage());
                 [11, 12],
                 [12, 0],
             ];
+            console.log(liens);
 
             //Inisialisation de la Map
             let map;
